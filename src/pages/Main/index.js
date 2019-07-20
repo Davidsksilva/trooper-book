@@ -4,7 +4,9 @@ import TopBar from '../../components/TopBar';
 
 const Main = () => {
   return (
-    <TopBar/>
+    <TopBar>
+      
+    </TopBar>
   )
 }
 

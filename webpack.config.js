@@ -26,6 +26,20 @@ module.exports = {
         test: /.*\.(gif|png|jpe?g)$/i,
         use: { loader: 'file-loader' },
       },
+      {
+        test: /\.svg$/,
+        use: [
+          {
+            loader: "babel-loader"
+          },
+          {
+            loader: "react-svg-loader",
+            options: {
+              jsx: true // true outputs JSX tags
+            }
+          }
+        ]
+      }
     ],
   },
 };
