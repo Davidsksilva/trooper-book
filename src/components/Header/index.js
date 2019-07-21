@@ -1,14 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import {FaUserCircle} from 'react-icons/fa'
+import { FaUserCircle } from 'react-icons/fa';
 
-import Logo from '../../assets/logo.svg';
+import logo from '../../assets/trooperbook.png';
+import helmet from '../../assets/helmet_i.png';
 
-const Container= styled.div`
+const Container = styled.div`
   height: 74px;
   width: 100%;
-  background-color: #4A90E2;
+  background-color: #000;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -27,29 +28,26 @@ const ProfileSection = styled.div`
   flex-direction: row;
   align-items: center;
 
-  color: #FFFFFF;
-
+  color: #ffffff;
 
   svg {
-      margin-left: 10px;
-      height: 24px;
-      width: 24px;
-    }
+    margin-left: 10px;
+    height: 24px;
+    width: 24px;
+  }
 `;
 
-
-
-
-const TopBar = () => {
+const Header = () => {
   return (
     <Container>
-      <Logo width={120} height={24}/>
+      <img src={logo} alt="logo" width={120} height={24} />
+
       <ProfileSection>
         My Profile
-        <FaUserCircle/>
+        <FaUserCircle />
       </ProfileSection>
     </Container>
-    );
-}
+  );
+};
 
-export default TopBar;
+export default Header;

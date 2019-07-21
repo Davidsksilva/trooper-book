@@ -1,13 +1,15 @@
-import React from 'react'
+import React from 'react';
 
-import TopBar from '../../components/TopBar';
+import Header from '../../components/Header';
+import PostList from '../../components/PostList';
 
 const Main = () => {
   return (
-    <TopBar>
-      
-    </TopBar>
-  )
-}
+    <>
+      <Header />
+      <PostList />
+    </>
+  );
+};
 
-export default Main
+export default Main;
