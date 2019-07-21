@@ -2,8 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-import clone from '../../assets/clone.png';
-
 import Comment from '../Comment';
 
 const Container = styled.div`
@@ -92,28 +90,16 @@ const Post = ({ data }) => {
   );
 };
 
-Post.defaultProps = {
-  data: {
-    author: {
-      avatar: clone,
-      name: 'A Clone Trooper',
-    },
-    date: '',
-    content: 'Reporting for duty.',
-    comments: [],
-  },
-};
-
 Post.propTypes = {
   data: PropTypes.shape({
     author: PropTypes.shape({
-      avatar: PropTypes.string,
-      name: PropTypes.string,
-    }),
-    date: PropTypes.string,
-    content: PropTypes.string,
-    comments: PropTypes.array,
-  }),
+      avatar: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+    }).isRequired,
+    date: PropTypes.string.isRequired,
+    content: PropTypes.string.isRequired,
+    comments: PropTypes.array.isRequired,
+  }).isRequired,
 };
 
 export default Post;

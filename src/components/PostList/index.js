@@ -29,10 +29,10 @@ export default class PostList extends Component {
           {
             id: 1,
             author: {
-              name: 'Diego Fernandes',
-              avatar: 'http://url-da-imagem.com/imagem.jpg',
+              name: 'Rex',
+              avatar: rex,
             },
-            content: 'Conteúdo do comentário',
+            content: 'Well, nice to know you care.',
           },
         ],
       },
@@ -44,15 +44,15 @@ export default class PostList extends Component {
         },
         date: '04 Jun 2019',
         content:
-          ' We’re not programmed. You have to learn to make your own decisions.',
+          'We’re not programmed. You have to learn to make your own decisions.',
         comments: [
           {
-            id: 1,
+            id: 2,
             author: {
-              name: 'Diego Fernandes',
-              avatar: 'http://url-da-imagem.com/imagem.jpg',
+              name: 'Fives',
+              avatar: fives,
             },
-            content: 'Conteúdo do comentário',
+            content: 'Copy that Captain Rex.',
           },
         ],
       },
@@ -69,10 +69,10 @@ export default class PostList extends Component {
           {
             id: 1,
             author: {
-              name: 'Diego Fernandes',
-              avatar: 'http://url-da-imagem.com/imagem.jpg',
+              name: 'Rex',
+              avatar: rex,
             },
-            content: 'Conteúdo do comentário',
+            content: 'Ah, we did it, Gregor. We did it.',
           },
         ],
       },

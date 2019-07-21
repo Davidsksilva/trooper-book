@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-
-import rex from '../../assets/rex.png';
+import PropTypes from 'prop-types';
 
 const Container = styled.div`
   display: flex;
@@ -35,15 +34,25 @@ const Content = styled.div`
   }
 `;
 
-const Comment = () => {
+const Comment = ({ data }) => {
   return (
     <Container>
-      <img src={rex} alt="rex" />
+      <img src={data.author.avatar} alt="avatar" />
       <Content>
-        <strong>Rex:</strong> Copy that.
+        <strong>{data.author.name}:</strong> {data.content}
       </Content>
     </Container>
   );
+};
+
+Comment.propTypes = {
+  data: PropTypes.shape({
+    author: PropTypes.shape({
+      avatar: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+    }).isRequired,
+    content: PropTypes.string.isRequired,
+  }).isRequired,
 };
 
 export default Comment;
